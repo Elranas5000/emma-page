@@ -1,0 +1,13 @@
+---
+import urls from '../assets/memorias/imagenes.json';
+
+// enlace a la galeria --> https://imgur.com/a/emma-y-mau-ixwBCfU 
+---
+
+<div class="galeria">
+  {urls.map((url) => (
+    <div class="foto">
+      <img src={url} alt="Memoria" />
+    </div>
+  ))}
+</div>

@@ -1,14 +1,51 @@
 ---
 import '../styles/memorias.css'
+import Galeria from '../components/Galeria.astro'
 title: "Memorias"
 ---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../public/favicon.ico" type="image/x-icon">
+    <title>El Baluarte de la Rana y la Bizcocha</title>
+</head>
+<body>
+  <a href="/">
+    <header>
+        <h1>El Baluarte de la Rana y la Bizcocha</h1>
+      </header>
+  </a>
+    <main>
+      <Galeria/>
+        <div id="botones-secciones">
+            <a href="/memorias">
+                <div class="boton-con-imagen">
+                    <button>Memorias</button>
+                    <img src="/src/assets/frog-cry.png" alt="Icono Memorias">
+                </div>
+            </a>
 
-<html>
-  <head>
-    <title> Nuestras Memorias</title>
-  </head>
-  <body>
-    <h1>Esta pretende ser una galeria de fotos</h1>
-    <p>Bienvenido a la primera página.</p>
-  </body>
+            <a href="/cuento">
+                <div class="boton-con-imagen">
+                    <button>El cuento</button>
+                    <div class="imagenesHorizontal">
+                        <img src="/src/assets/peepo-holdin-hearth.webp" alt="Icono Rana">
+                    </div>
+                </div>
+            </a>
+
+            <a href="/cursilerias">
+                <div class="boton-con-imagen">
+                    <button>Cursilería</button>
+                    <img src="/src/assets/frog-cuteLooking.png" alt="Icono Cursilería">
+                </div>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>Creada con ❤️ para Emma</p>
+    </footer>
+</body>
 </html>
