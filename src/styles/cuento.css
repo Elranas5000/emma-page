@@ -1,0 +1,171 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Pico', sans-serif;
+    background-color: #2D1A4D; 
+    color: #E8D7FF; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #1A0A34;
+    padding: 20px;
+    color: #BB86FC; 
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #9B4DDF;
+    color: #4b2f78;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Estilos para el contenido principal */
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Estilos para el contenedor del cuento */
+.cuento-container {
+    max-width: 900px;
+    width: 100%;
+    background-color: #3E1B68;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cuento-titulo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #BB86FC;
+    text-align: center;
+}
+
+.cuento-cuerpo {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #E8D7FF;
+}
+
+.cuento-cuerpo p{
+    margin-bottom: 20px;
+}
+
+/* Estilos para los botones con imágenes */
+#botones-secciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#botones-secciones a {
+    text-decoration: none;
+}
+
+.boton-con-imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    background-color: #4b2f78;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.boton-con-imagen button {
+    background-color: #BB86FC;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.boton-con-imagen:hover {
+    background-color: #9B4DDF;
+}
+
+.boton-con-imagen img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-top: 5px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #1A0A34;
+    color: #BB86FC;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 2px solid #BB86FC;
+}
+
+/* Adaptación para dispositivos pequeños */
+@media (max-width: 750px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .cuento-container {
+        padding: 15px;
+    }
+
+    .cuento-titulo {
+        font-size: 1.8rem;
+    }
+
+    .cuento-cuerpo {
+        font-size: 1rem;
+    }
+
+    #botones-secciones {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .boton-con-imagen {
+        flex-direction: row; 
+        align-items: center; 
+    }
+
+    .boton-con-imagen img {
+        width: 40px;
+        height: 40px;
+    }
+}
