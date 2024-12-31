@@ -54,6 +54,44 @@ main {
     padding: 20px 0;
 }
 
+/* Contenedor para los párrafos */
+.parrafos-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px; /* Espacio entre párrafos */
+}
+
+/* Estilos para los párrafos */
+p {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo suave */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px; /* Limitar el ancho de los párrafos */
+    font-size: 1rem;
+    line-height: 1.6;
+    transition: transform 0.3s ease;
+    align-self: center; /* Centrar los párrafos */
+}
+
+/* Estilos para imágenes */
+img {
+    object-fit: contain;
+    width: 100%; 
+    max-width: 400px; /* Limitar el ancho máximo de las imágenes */
+    border-radius: 25px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05); /* Efecto zoom al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 /* Contenedor para imágenes alineadas */
 .imgLado {
     display: flex;
@@ -62,31 +100,33 @@ main {
     flex-wrap: wrap; /* Permite que las imágenes se ajusten */
 }
 
-/* Estilos para imágenes */
-.imgLado img {
-    object-fit: contain;
-    width: 10%; 
-    max-width: 120px; /* Limitar el ancho máximo de las imágenes */
-    border-radius: 25px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.imgLado img:hover {
-    transform: scale(1.05); /* Efecto zoom al pasar el mouse */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+/* Estilos para el pie de página */
+footer {
+    background-color: #1A0A34;
+    color: #BB86FC;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 2px solid #BB86FC;
 }
 
 /* Adaptación para dispositivos pequeños */
 @media (max-width: 750px) {
-    .imgLado {
-        flex-direction: column; /* Coloca las imágenes en columna */
-        align-items: center; /* Centra las imágenes */
-        gap: 15px; /* Ajusta el espacio entre imágenes */
+    header h1 {
+        font-size: 1.5rem;
     }
 
-    .imgLado img {
-        width: 50%; /* Aumenta el tamaño de las imágenes */
+    p {
+        width: 90%; /* Ajuste de ancho en pantallas pequeñas */
+    }
+
+    .imgLado {
+        flex-direction: column; /* Coloca las imágenes en columna */
+        align-items: center;
+    }
+
+    img {
+        width: 80%; /* Aumenta el tamaño de las imágenes */
         max-width: none; /* Elimina el límite de ancho */
     }
 }
