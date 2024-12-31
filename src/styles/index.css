@@ -1,59 +1,82 @@
-/* Estilos básicos para la página */
-body {
-    font-family: Arial, sans-serif;
+/* Estilos generales */
+* {
     margin: 0;
     padding: 0;
-    background-color: #e0f7fa; /* Azul claro */
-    color: #01579b; /* Azul oscuro */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1E1E1E; /* Fondo oscuro como en VSCode */
+    color: #D4D4D4; /* Color de texto claro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hace que la página ocupe toda la altura de la ventana */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333333; /* Fondo más claro que el body */
+    padding: 20px;
+    color: #569CD6; /* Color azul como en VSCode */
     text-align: center;
 }
 
-/* Encabezado */
-header {
-    background-color: #0288d1; /* Azul intermedio */
-    padding: 20px;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    font-size: 2rem;
 }
 
-/* Contenido principal */
+/* Estilos para el contenido principal */
 main {
     padding: 20px;
+    text-align: center;
+    flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */
 }
 
-main p {
-    font-size: 1.2em;
-    margin: 10px 0;
+/* Estilos para la imagen en main */
+main img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para el texto y el botón */
+p {
+    margin: 20px 0;
+    font-size: 1.2rem;
 }
 
 /* Botón */
 button {
-    background-color: #0277bd; /* Azul intenso */
+    background-color: #007ACC; /* Botón azul VSCode */
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 1em;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
     transition: background-color 0.3s ease;
+
 }
 
 button:hover {
-    background-color: #01579b; /* Azul oscuro */
+    background-color: #0066A1; /* Color azul más oscuro para hover */
 }
 
-/* Pie de página */
+/* Estilos para el pie de página */
 footer {
-    background-color: #0288d1; /* Azul intermedio */
-    color: white;
+    background-color: #333333; /* Fondo más claro que el body */
+    color: #D4D4D4; /* Color de texto más suave */
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
+
+#entrada{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#boton-entrar{
+    justify-content: center;
+}
+
