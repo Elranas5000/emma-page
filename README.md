@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+<!-- # Astro Starter Kit: Basics
 
 ```sh
 npm create astro@latest -- --template basics
@@ -45,5 +45,8 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat). -->
 # emma-page
+> A small but cute project dedicated to my girlfriend Emma. This is for you <3
+
+> The website also means to be my first practice with Astro framework.
