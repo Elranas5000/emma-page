@@ -12,8 +12,15 @@ body {
     color: #E8D7FF; 
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    align-items: center; /* Centrar contenido horizontalmente */
     padding: 20px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 90%; /* Ancho máximo del contenido */
+    max-width: 1200px; /* Limitar el ancho para pantallas grandes */
+    margin: 0 auto; /* Centrar en la pantalla */
 }
 
 /* Estilos para el encabezado */
@@ -42,11 +49,9 @@ header h1 {
 main {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    padding: 20px;
     align-items: center;
-    justify-content: flex-start; 
     gap: 30px;
+    padding: 20px 0;
 }
 
 /* Contenedor para los párrafos */
@@ -64,46 +69,35 @@ p {
     padding: 15px;
     margin: 10px 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 80%; /* Ancho máximo */
+    width: 100%;
+    max-width: 800px; /* Limitar el ancho de los párrafos */
     font-size: 1rem;
     line-height: 1.6;
     transition: transform 0.3s ease;
+    align-self: center; /* Centrar los párrafos */
 }
 
-/* Alternancia de los márgenes de los párrafos */
-p.izquierda {
-    align-self: flex-start;
-    margin-left: 0; /* Alineado a la izquierda */
-    margin-right: auto; /* Evita que se desplace a la derecha */
+/* Estilos para imágenes */
+img {
+    object-fit: contain;
+    width: 100%; 
+    max-width: 400px; /* Limitar el ancho máximo de las imágenes */
+    border-radius: 25px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-p.derecha {
-    align-self: flex-end;
-    margin-left: auto; /* Alineado a la derecha */
-    margin-right: 0; /* Evita que se desplace a la izquierda */
+img:hover {
+    transform: scale(1.05); /* Efecto zoom al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos para las citas */
-p.cita {
-    font-style: italic;
-    background-color: transparent; /* Sin fondo */
-    border: none; /* Sin borde */
-    font-size: 1.1rem;
-    font-weight: 300; /* Hacerla más suave */
-    margin: 15px 0;
-    text-align: center;
-}
-
+/* Contenedor para imágenes alineadas */
 .imgLado {
     display: flex;
-    gap: 45px;
+    gap: 20px;
     justify-content: center;
-}
-
-img{
-    object-fit: contain;
-    width: 20%;
-    
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten */
 }
 
 /* Estilos para el pie de página */
@@ -116,59 +110,6 @@ footer {
     border-top: 2px solid #BB86FC;
 }
 
-/* Estilos para los botones con imágenes */
-#botones-secciones {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 30px;
-}
-
-#botones-secciones a {
-    text-decoration: none;
-}
-
-.boton-con-imagen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 10px;
-    background-color: #4b2f78;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-.boton-con-imagen button {
-    background-color: #BB86FC;
-    color: white;
-    border: none;
-    padding: 20px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    width: 100%;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-.boton-con-imagen:hover {
-    background-color: #9B4DDF;
-}
-
-.boton-con-imagen img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    margin-top: 5px;
-}
-
 /* Adaptación para dispositivos pequeños */
 @media (max-width: 750px) {
     header h1 {
@@ -179,18 +120,13 @@ footer {
         width: 90%; /* Ajuste de ancho en pantallas pequeñas */
     }
 
-    #botones-secciones {
-        flex-direction: column; 
+    .imgLado {
+        flex-direction: column; /* Coloca las imágenes en columna */
         align-items: center;
     }
 
-    .boton-con-imagen {
-        flex-direction: row; 
-        align-items: center; 
-    }
-
-    .boton-con-imagen img {
-        width: 40px;
-        height: 40px;
+    img {
+        width: 80%; /* Aumenta el tamaño de las imágenes */
+        max-width: none; /* Elimina el límite de ancho */
     }
 }
