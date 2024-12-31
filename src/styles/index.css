@@ -6,77 +6,176 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1E1E1E; /* Fondo oscuro como en VSCode */
-    color: #D4D4D4; /* Color de texto claro */
+    font-family: 'Pico', sans-serif;
+    background-color: #2D1A4D; 
+    color: #E8D7FF; 
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Hace que la página ocupe toda la altura de la ventana */
+    min-height: 100vh;
+    padding: 20px;
 }
 
 /* Estilos para el encabezado */
 header {
-    background-color: #333333; /* Fondo más claro que el body */
+    background-color: #1A0A34;
     padding: 20px;
-    color: #569CD6; /* Color azul como en VSCode */
+    color: #BB86FC; 
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin: 0;
 }
 
 /* Estilos para el contenido principal */
 main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     padding: 20px;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 30px;
+}
+
+/* Estilos para la sección "entrada" */
+#entrada {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
-    flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */
-}
-
-/* Estilos para la imagen en main */
-main img {
-    max-width: 100%;
     height: auto;
-}
-
-/* Estilos para el texto y el botón */
-p {
     margin: 20px 0;
-    font-size: 1.2rem;
+    position: relative;
 }
 
-/* Botón */
-button {
-    background-color: #007ACC; /* Botón azul VSCode */
+#entrada h3 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #E8D7FF;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#gorda-sapa {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+#gorda-sapa img{
+    border-radius: 15%;
+}
+
+#cita {
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    font-size: 1rem;
+    color: #B388D8;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Estilos para los botones con imágenes */
+#botones-secciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#botones-secciones a {
+    text-decoration: none;
+}
+
+.boton-con-imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    background-color: #4B2F78;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.boton-con-imagen button {
+    background-color: #BB86FC;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 20px 30px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    margin-bottom: 10px;
+    width: 100%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
-
 }
 
-button:hover {
-    background-color: #0066A1; /* Color azul más oscuro para hover */
+.boton-con-imagen:hover {
+    background-color: #9B4DDF;
+}
+
+.boton-con-imagen img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-top: 5px;
 }
 
 /* Estilos para el pie de página */
 footer {
-    background-color: #333333; /* Fondo más claro que el body */
-    color: #D4D4D4; /* Color de texto más suave */
+    background-color: #1A0A34;
+    color: #BB86FC;
     padding: 10px;
     text-align: center;
+    font-size: 0.9rem;
+    border-top: 2px solid #BB86FC;
 }
 
-#entrada{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-}
+/* Adaptación para dispositivos pequeños */
+@media (max-width: 750px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
 
-#boton-entrar{
-    justify-content: center;
-}
+    #entrada h3 {
+        font-size: 1.2rem;
+    }
 
+    #gorda-sapa img {
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+    }
+
+    #cita {
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    #botones-secciones {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .boton-con-imagen {
+        flex-direction: row; 
+        align-items: center; 
+    }
+
+    .boton-con-imagen img {
+        width: 40px;
+        height: 40px;
+    }
+}
